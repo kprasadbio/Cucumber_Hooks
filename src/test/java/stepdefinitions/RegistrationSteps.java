@@ -24,12 +24,6 @@ public class RegistrationSteps
 	public void i_am_in_automation_page(String pagetitle) throws IOException, ParseException{ 
 		
 		System.out.println("this is getting printed from @Given");
-
-		String value=ReusableComponents.readJSONValue("FirstName");
-		
-		driver.findElement(By.linkText("REGISTER")).click();
-		
-		driver.findElement(By.name("firstName")).sendKeys(value);
 		
 		
 	}
@@ -39,11 +33,6 @@ public class RegistrationSteps
 		
 		System.out.println("this is getting printed from @When");
 		
-		String value=ReusableComponents.readJSONValue(lastname);
-		driver.findElement(By.name("lastName")).sendKeys(value);
-		
-		String value2=ReusableComponents.readJSONArrayData(phone, "phonenumber");
-		driver.findElement(By.name("phone")).sendKeys(value2);
 	}
 
 	@Then("^I will click on submit button$")
@@ -51,10 +40,6 @@ public class RegistrationSteps
 		
 		System.out.println("this is getting printed from @Then");
 		
-		String value2=ReusableComponents.readJSONArrayData("eContact", "email");
-		driver.findElement(By.name("userName")).sendKeys(value2);
-		  
- 
 	}
 	
 }
