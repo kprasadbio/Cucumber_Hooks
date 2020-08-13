@@ -51,8 +51,8 @@ public class CucumberHooks {
 	
 	@AfterStep
 	public void afterStep() throws IOException, ParseException{
-		ReusableComponents reusable=new ReusableComponents();
-		reusable.readjsonData(null);
+//		ReusableComponents reusable=new ReusableComponents();
+//		reusable.readjsonData(null);
 	}
 
 }
